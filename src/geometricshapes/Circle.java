@@ -67,6 +67,17 @@ public class Circle{
 			contiene = true;
 		return contiene;
 	}
+	
+	public boolean contains(Triangle t)
+	{
+		boolean contiene = false;
+		if((this.getXMin() <= t.getXMin()) && 
+				(this.getYMin() <= t.getYMin()) &&
+				(t.getXMax() <= this.getXMax()) &&
+				(t.getYMax() <= this.getYMax()))
+			contiene = true;
+		return contiene;
+	}
 
 	@Override
 	public String toString() {
